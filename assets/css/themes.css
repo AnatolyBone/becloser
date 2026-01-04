@@ -1,0 +1,48 @@
+/* Themes - Ближе App */
+
+/* Blue Theme (Default) */
+.theme-blue {
+    --bg-from: #e0f2fe;
+    --bg-to: #ede9fe;
+    --accent: #7c3aed;
+    --accent-light: #a78bfa;
+    --accent-rgb: 124, 58, 237;
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Warm Theme */
+.theme-warm {
+    --bg-from: #fef3c7;
+    --bg-to: #fce7f3;
+    --accent: #ec4899;
+    --accent-light: #f9a8d4;
+    --accent-rgb: 236, 72, 153;
+    --card-bg: rgba(255, 255, 255, 0.92);
+}
+
+/* Neutral Theme */
+.theme-neutral {
+    --bg-from: #f5f5f4;
+    --bg-to: #e7e5e4;
+    --accent: #78716c;
+    --accent-light: #a8a29e;
+    --accent-rgb: 120, 113, 108;
+    --card-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Theme Preview Borders */
+.theme-preview {
+    transition: all 0.2s ease;
+}
+
+#themeBlue.active {
+    border-color: #7c3aed;
+}
+
+#themeWarm.active {
+    border-color: #ec4899;
+}
+
+#themeNeutral.active {
+    border-color: #78716c;
+}
