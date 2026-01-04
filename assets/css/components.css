@@ -1,0 +1,159 @@
+/* Components - Ближе App */
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+}
+
+/* Primary Button */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px var(--accent);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    transform: none;
+    cursor: not-allowed;
+}
+
+/* Option Buttons */
+.option-btn {
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.option-btn.selected {
+    border-color: var(--accent);
+    background: rgba(var(--accent-rgb), 0.1);
+}
+
+.option-btn:hover {
+    transform: scale(1.02);
+}
+
+/* Progress Dots */
+.progress-dot {
+    transition: all 0.3s ease;
+}
+
+.progress-dot.active {
+    background: var(--accent);
+    transform: scale(1.3);
+}
+
+/* Category Chips */
+.category-chip {
+    transition: all 0.2s ease;
+}
+
+.category-chip.selected {
+    background: var(--accent);
+    color: white;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    transition: all 0.3s ease;
+}
+
+.toggle-switch.active {
+    background: var(--accent);
+}
+
+.toggle-switch.active .toggle-knob {
+    transform: translateX(24px);
+}
+
+/* Hint Box */
+.hint-box {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.hint-box.open {
+    max-height: 200px;
+}
+
+/* Font Size Buttons */
+.font-size-btn {
+    transition: all 0.2s ease;
+}
+
+.font-size-btn.active {
+    background: var(--accent) !important;
+    color: white !important;
+}
+
+/* Favorite Button States */
+.favorite-btn .icon-filled {
+    display: none;
+}
+
+.favorite-btn.active .icon-outline {
+    display: none;
+}
+
+.favorite-btn.active .icon-filled {
+    display: block;
+}
+
+/* Telegram Link */
+.telegram-link {
+    transition: all 0.2s ease;
+}
+
+.telegram-link:hover {
+    color: var(--accent);
+}
+
+/* History Card */
+.history-card {
+    transition: all 0.2s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+/* Ripple Effect (optional) */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.ripple:active::after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+}
